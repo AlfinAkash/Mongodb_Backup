@@ -67,3 +67,9 @@ cd backup/myDB
 # 3. Convert all BSON files to JSON
 for %f in (*.bson) do bsondump "%f" > "%~nf.json"
 ```
+
+## Import to new database
+
+```bash
+mongoimport --uri="mongodb+srv://username:password@newcluster.mongodb.net/yourDB" --collection=yourCollection --file=yourCollection.json
+```b
